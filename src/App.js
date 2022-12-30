@@ -15,6 +15,11 @@ function App() {
         }
       }
       if(payload==='0' && state.currentOperand==='0') return state;
+      if(state.currentOperand==null && payload==='.') 
+      return {
+        ...state,
+        currentOperand:'0.'
+      };
       if(payload==='.' && state.currentOperand.includes('.')) return state;
       return {
         ...state,
