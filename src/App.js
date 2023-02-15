@@ -114,8 +114,8 @@ function App() {
         computation = prev / current;
         break;
     }
-
-    return computation.toString();
+    let result = computation.toFixed(2)
+    return result.toString();
   }
   
   const [{currentOperand,previousOperand,operation},dispatch] = useReducer(reducer,{});
